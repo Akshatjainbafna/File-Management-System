@@ -7,7 +7,8 @@ The app is build is MERN stack and client server architecture.**
 ## To run this project:
 
 > make a clone
-git clone <PUT the HTTP Clone address>
+
+git clone https://github.com/Akshatjainbafna/Mobigic-Assignment.git
 
 
 > start the client
