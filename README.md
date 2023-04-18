@@ -6,12 +6,21 @@ The app is build is MERN stack and client server architecture.
 
 To run this project:
 
+#make a clone
 git clone <PUT the HTTP Clone address>
 
+
+#start the client
 cd client
+
 npm install
+
 npm start
 
+
+#start the server
 cd ../server
+
 npm install
+
 node index.js
