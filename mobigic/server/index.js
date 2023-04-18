@@ -68,7 +68,7 @@ app.post('/authenticate', async (req, res) => {
 
             if (username && password) {
 
-                const saveUser = new user({ username, password })
+                const saveUser = new UserModel({ username, password })
                 const saved = await saveUser.save()
 
                 if (saved) {
@@ -79,7 +79,7 @@ app.post('/authenticate', async (req, res) => {
                 } else {
 
                     response.msg = "Technical error.",
-                    response.status = 400
+                        response.status = 400
 
                 }
             } else {
@@ -110,17 +110,32 @@ app.post('/logout', async (req, res) => {
     } catch (err) {
         console.log(err)
     }
-    
+
 })
 
-//upload file
+//upload file 
 app.post('/uploadFile', upload.single('file'), async (req, res) => {
 
     let response = {
         status: 200,
         msg: ''
     }
-    
+
+    /* req.file object looks like this: 
+
+        {
+        fieldname: 'myFile',
+        originalname: 'Final Resume.pdf',
+        encoding: '7bit',
+        mimetype: 'application/pdf',
+        destination: 'public/files',
+        filename: '54a87baf681a51490eda5626f495df6c',
+        path: 'public\\files\\54a87baf681a51490eda5626f495df6c',
+        size: 2034370
+        } 
+
+    */
+
     if (req.file) {
 
         const file = req.file.originalname
