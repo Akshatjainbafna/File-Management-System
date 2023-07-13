@@ -1,4 +1,4 @@
-# Mobigic-Assignment
+# File-Management-System
 
 **It's a Simple File Directory App, which allows you to Authenticate, Upload, Download and Delete files.
 You require a 6 digit code to delete it. On uploading file, a 6 digit code will be generated and stored in the Database, which you have to enter in the prompt, to Download it. The File will be stored in a Upload folder with the help of Multer, you can use JS or Node.js file handler as well.
